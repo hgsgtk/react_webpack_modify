@@ -16,15 +16,15 @@ module.exports = {
       { test: /\.css$/, loader: "file?name=[name].[ext]" },
       { test: /\.jsx$/, exclude: /node_modules/, loader: ["react-hot", "babel"] },
     ],
-    rules: [
-      {test: /\.jsx?$/,
-       exclude: /node_modules/,
-       loader: "eslint-loader",
-       query: {
-         configFile: './.eslintrc'
-       }
-     },
-    ],
+    rules: [{
+      test: /\.jsx?$/,
+      exclude: /node_modules/,
+      enforce: "pre",
+      loader: "eslint-loader",
+      query: {
+        configFile: './.eslintrc'
+      },
+    }],
   },
   resolve: {
     extensions: ['*', '.js', '.jsx']
