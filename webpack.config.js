@@ -11,19 +11,22 @@ module.exports = {
     filename: "bundle.js",
   },
   module: {
-    preLoaders: [
-      {test: /\.jsx?$/, exclude: /node_modules/, loader: "eslint-loader"},
-    ],
     loaders: [
       { test: /\.html$/, loader: "file?name=[name].[ext]" },
       { test: /\.css$/, loader: "file?name=[name].[ext]" },
       { test: /\.jsx$/, exclude: /node_modules/, loader: ["react-hot", "babel"] },
     ],
+    rules: [
+      {test: /\.jsx?$/,
+       exclude: /node_modules/,
+       loader: "eslint-loader",
+       query: {
+         configFile: './.eslintrc'
+       }
+     },
+    ],
   },
   resolve: {
-    extentions: ['', '.js', '.jsx']
-  },
-  eslint: {
-    configFile: __dirname + './.eslintrc'
+    extensions: ['*', '.js', '.jsx']
   },
 };
