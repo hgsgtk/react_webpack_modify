@@ -1,0 +1,44 @@
+{
+  "name": "react_redux_introduction",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --hot --inline --progress --colors",
+    "build": "webpack --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KAZUKI1994/react_redux_introduction.git"
+  },
+  "author": "kazuki higashiguchi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KAZUKI1994/react_redux_introduction/issues"
+  },
+  "homepage": "https://github.com/KAZUKI1994/react_redux_introduction#readme",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "eslint": "^4.1.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-react": "^7.1.0",
+    "file-loader": "^0.11.2",
+    "react-hot-loader": "^1.3.1",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1"
+  }
+}
